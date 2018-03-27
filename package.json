@@ -1,0 +1,19 @@
+{
+  "name": "nodetute",
+  "version": "1.0.0",
+  "description": "this is sample node js files",
+  "main": "modules.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dulmina",
+    "any",
+    "one"
+  ],
+  "author": "dulmina",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2"
+  }
+}
