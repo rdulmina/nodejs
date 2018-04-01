@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		
+	</head>
+	<body>
+		<center>
+			<h1>Student Details</h1>
+			<table class="table">
+				<tr>
+					<th>Index No</th>
+					<th>FName</th>
+					<th>LName</th>
+					<th>Tel</th>
+				</tr>
+				<tbody>
+					{{#each result}}
+					<tr><td>{{this.IndexNo}}</td><td>{{this.Fname}}</td><td>{{this.Lname}}</td><td>{{this.Tel}}</td><td><button class="btn-danger btn">Delete</button></td></tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</center>
+	</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+	$('.btn').click(function(){
+		var ino=$(this).parent().parent().children().first().html();
+		window.location.href="/deleteuser/"+ino;
+//		$.ajax({
+//			type:'post',
+//			url:'/deleteuser',
+//			data:{IndexNo:ino},
+//			success:function(data){
+//				
+//			}
+//		});
+	});
+</script>
